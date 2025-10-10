@@ -1,28 +1,74 @@
 using System;
+using UnityEngine;
 
-public class UpgradesStorage : IDataPersistence
+public class UpgradesStorage
 {
-    public UpgradeConfig UpgradeConfig { get; set; }
+    private string _name;
+    private string _description;
 
-    private bool _isFirstBuy;
+    private int _basePrice;
+    private int _currentPrice;
+    private int _value;
+
+    private UpgradeType _type;
+    private Sprite _icon;
+
+    private bool _isPurchased;
+
+    public string Name => _name;
+    public string Description => _description;
+
+    public int BasePrice
+    {
+        get { return _basePrice; }
+        set
+        {
+            if (value < 0)
+                throw new Exception("Price cannot be a negative");
+
+            _basePrice = value;
+        }
+    }
+
+    public bool IsPurchased
+    {
+        get => _isPurchased;
+        set
+        {
+            _isPurchased = value;
+            OnPurchaseStateChanged?.Invoke(_isPurchased);
+        }
+    }
+
+    public int Value => _value;
+
+    public UpgradeType Type => _type;
+    public Sprite Icon => _icon;
 
     public event Action<int> OnPriceChanged;
+    public event Action<bool> OnPurchaseStateChanged;
 
-    public UpgradesStorage(UpgradeConfig upgradeConfig)
+    public UpgradesStorage(string name, string description, int basePrice, int value, UpgradeType type, Sprite icon)
     {
-        UpgradeConfig = upgradeConfig;
-        _isFirstBuy = true;
+        _name = name;
+        _description = description;
+        _basePrice = basePrice;
+        _value = value;
+        _type = type;
+        _icon = icon;
+
+        _isPurchased = false;
     }
 
     public void ApplyUpgrade(MoneyStorage moneyStorage)
     {
-        switch (UpgradeConfig.Type)
+        switch (_type)
         {
             case UpgradeType.MoneyPerClick:
-                moneyStorage.SetMoneyPerClick(UpgradeConfig.Value);
+                moneyStorage.SetMoneyPerClick(_value); _isPurchased = true;
                 break;
             case UpgradeType.MoneyPerSecond:
-                moneyStorage.SetMoneyPerSecond(UpgradeConfig.Value);
+                moneyStorage.SetMoneyPerSecond(_value); _isPurchased = true;
                 break;
             default:
                 break;
@@ -31,19 +77,28 @@ public class UpgradesStorage : IDataPersistence
 
     public void RecalculationPrice() 
     {
-        int newPrice = UpgradeConfig.Price + 5;
+        int newPrice = _basePrice + 5;
 
-        UpgradeConfig.Price = newPrice;
+        _basePrice = newPrice;
         OnPriceChanged?.Invoke(newPrice);
     }
 
-    public void LoadData(GameData data)
+    public void LoadFromSaveData(UpgradeSaveData saveData)
     {
-        UpgradeConfig = data.UpgradeConfig;
+        if (saveData != null)
+        {
+            IsPurchased = saveData.IsPurchased;
+            BasePrice = saveData.CurrentPrice;
+        }
     }
 
-    public void SaveData(ref GameData data)
+    public void PopulateSaveData(UpgradeSaveData saveData)
     {
-        data.UpgradeConfig = UpgradeConfig;
+        if (saveData != null)
+        {
+            saveData.Name = Name;
+            saveData.IsPurchased = IsPurchased;
+            saveData.CurrentPrice = BasePrice;
+        }
     }
 }

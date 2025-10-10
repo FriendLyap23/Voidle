@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 [System.Serializable]
 public class GameData
 {
@@ -9,17 +11,24 @@ public class GameData
     public float CurrentExperienceLevel;
     public int ExperiencePerClick;
 
-    public UpgradeConfig UpgradeConfig;
+    public List<UpgradeSaveData> UpgradesSaveData = new List<UpgradeSaveData>();
 
-    public GameData() 
+    public GameData()
     {
         Money = 0;
         MoneyPerClick = 1;
+        MoneyPerSecond = 0;
 
         CurrentLevel = 1;
         CurrentExperienceLevel = 0;
         ExperiencePerClick = 1;
-
-        UpgradeConfig = new UpgradeConfig();
     }
+}
+
+[System.Serializable]
+public class UpgradeSaveData
+{
+    public string Name;
+    public bool IsPurchased;
+    public int CurrentPrice;
 }

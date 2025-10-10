@@ -14,6 +14,9 @@ public sealed class ViewModelsInstaller : MonoInstaller
             .AsSingle()
             .NonLazy();
 
-        Container.Bind<UpgradesViewModelFactory>().AsSingle();
+        Container
+            .Bind<UpgradesViewModelFactory>()
+            .AsSingle()
+            .NonLazy();
     }
 }

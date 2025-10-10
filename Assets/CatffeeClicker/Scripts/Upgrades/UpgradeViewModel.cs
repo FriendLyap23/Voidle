@@ -13,32 +13,29 @@ public class UpgradeViewModel : IInitializable, IDisposable
     public readonly ReactiveProperty<string> Price = new();
     public readonly ReactiveProperty<Sprite> Icon = new();
 
-    private UpgradeConfig _config;
-
-    public UpgradeViewModel(UpgradeConfig config, UpgradesStorage upgradesStorage)
+    public UpgradeViewModel(UpgradesStorage upgradesStorage)
     {
-        _config = config;
         _upgradesStorage = upgradesStorage;
     }
 
     public void Initialize()
     {
-        Name.Value = _config.Name;
-        Description.Value = _config.Description;
-        Price.Value = _config.Price.ToString();
-        Icon.Value = _config.Icon;
+        Name.Value = _upgradesStorage.Name;
+        Description.Value = _upgradesStorage.Description;
+        Price.Value = _upgradesStorage.BasePrice.ToString();
+        Icon.Value = _upgradesStorage.Icon;
 
         _upgradesStorage.OnPriceChanged += PriceChanged;
     }
 
-    private void NameChanged(UpgradeConfig config) 
+    private void NameChanged(UpgradesStorage storage) 
     {
-        Name.Value = config.Name;
+        Name.Value = storage.Name;
     }
 
-    private void DescriptionChanged(UpgradeConfig config)
+    private void DescriptionChanged(UpgradesStorage storage)
     {
-        Description.Value = config.Description;
+        Description.Value = storage.Description;
     }
 
     private void PriceChanged(int newPrice)
@@ -46,9 +43,9 @@ public class UpgradeViewModel : IInitializable, IDisposable
         Price.Value = newPrice.ToString();
     }
 
-    private void IconChanged(UpgradeConfig config)
+    private void IconChanged(UpgradesStorage storage)
     {
-        Icon.Value = config.Icon;
+        Icon.Value = storage.Icon;
     }
 
     public void Dispose()
