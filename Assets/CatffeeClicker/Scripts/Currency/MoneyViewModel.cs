@@ -21,7 +21,12 @@ public sealed class MoneyViewModel : IInitializable, IDisposable
      
     public void AddMoneyPerClick()
     {
-        _moneyStorage.AddMoney(_moneyStorage.MoneyPerClick);
+        _moneyStorage.AddMoneyPerClick(_moneyStorage.Money);
+    }
+
+    public void AddMoneyPerSecond() 
+    {
+        //_moneyStorage.SetMoneyPerSecond();
     }
 
     public void SpendMoney(int amount) 

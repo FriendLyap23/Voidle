@@ -25,6 +25,11 @@ public sealed class MoneyUIBinder : MonoBehaviour
         _moneyPerClickButton.OnClick += OnMoneyButtonClick;
     }
 
+    public void Update()
+    {
+        _moneyViewModel.AddMoneyPerSecond();
+    }
+
     private void OnMoneyButtonClick() 
     {
         _moneyViewModel.AddMoneyPerClick();

@@ -298,6 +298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23aa3b72bbbd1114caf3e113e4db92d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _initialMoney: 13
+  _initialMoneyPerClick: 1
+  _initialMoneyPerSecond: 0
 --- !u!4 &32134577
 Transform:
   m_ObjectHideFlags: 0
@@ -643,6 +646,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fee927b9067c8b44a26fe4a0f1893e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _initialLevel: 1
+  _initialExp: 0
+  _experiencePerClick: 1
+  _maxLevel: 15
+  _experienceForLevel:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 15
+  - 17
+  - 20
+  - 25
+  - 100
+  - 500
+  - 32424
+  - 5476
+  - 54654
 --- !u!1 &162123929
 GameObject:
   m_ObjectHideFlags: 0

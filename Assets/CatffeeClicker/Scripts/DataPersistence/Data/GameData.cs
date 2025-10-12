@@ -7,9 +7,10 @@ public class GameData
     public int MoneyPerClick;
     public int MoneyPerSecond;
 
-    public int CurrentLevel;
-    public float CurrentExperienceLevel;
+    public int Level;
+    public float ExperienceLevel;
     public int ExperiencePerClick;
+    public int MaxMonies;
 
     public List<UpgradeSaveData> UpgradesSaveData = new List<UpgradeSaveData>();
 
@@ -19,9 +20,10 @@ public class GameData
         MoneyPerClick = 1;
         MoneyPerSecond = 0;
 
-        CurrentLevel = 1;
-        CurrentExperienceLevel = 0;
+        Level = 1;
+        ExperienceLevel = 0;
         ExperiencePerClick = 1;
+        MaxMonies = 1000;
     }
 }
 
@@ -29,6 +31,5 @@ public class GameData
 public class UpgradeSaveData
 {
     public string Name;
-    public bool IsPurchased;
     public int CurrentPrice;
 }

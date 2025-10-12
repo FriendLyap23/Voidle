@@ -68,6 +68,5 @@ public class UpgradeUIBinder : MonoBehaviour
     private void OnDestroy()
     {
         _disposables.Dispose();
-        _upgradesViewModel?.Dispose();
     }
 }

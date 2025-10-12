@@ -13,8 +13,6 @@ public class UpgradesStorage
     private UpgradeType _type;
     private Sprite _icon;
 
-    private bool _isPurchased;
-
     public string Name => _name;
     public string Description => _description;
 
@@ -30,23 +28,9 @@ public class UpgradesStorage
         }
     }
 
-    public bool IsPurchased
-    {
-        get => _isPurchased;
-        set
-        {
-            _isPurchased = value;
-            OnPurchaseStateChanged?.Invoke(_isPurchased);
-        }
-    }
-
     public int Value => _value;
-
     public UpgradeType Type => _type;
     public Sprite Icon => _icon;
-
-    public event Action<int> OnPriceChanged;
-    public event Action<bool> OnPurchaseStateChanged;
 
     public UpgradesStorage(string name, string description, int basePrice, int value, UpgradeType type, Sprite icon)
     {
@@ -56,8 +40,6 @@ public class UpgradesStorage
         _value = value;
         _type = type;
         _icon = icon;
-
-        _isPurchased = false;
     }
 
     public void ApplyUpgrade(MoneyStorage moneyStorage)
@@ -65,29 +47,20 @@ public class UpgradesStorage
         switch (_type)
         {
             case UpgradeType.MoneyPerClick:
-                moneyStorage.SetMoneyPerClick(_value); _isPurchased = true;
+                moneyStorage.SetMoneyPerClick(_value);
                 break;
             case UpgradeType.MoneyPerSecond:
-                moneyStorage.SetMoneyPerSecond(_value); _isPurchased = true;
+                moneyStorage.SetMoneyPerSecond(_value);
                 break;
             default:
                 break;
         }
     }
 
-    public void RecalculationPrice() 
-    {
-        int newPrice = _basePrice + 5;
-
-        _basePrice = newPrice;
-        OnPriceChanged?.Invoke(newPrice);
-    }
-
     public void LoadFromSaveData(UpgradeSaveData saveData)
     {
         if (saveData != null)
         {
-            IsPurchased = saveData.IsPurchased;
             BasePrice = saveData.CurrentPrice;
         }
     }
@@ -97,7 +70,6 @@ public class UpgradesStorage
         if (saveData != null)
         {
             saveData.Name = Name;
-            saveData.IsPurchased = IsPurchased;
             saveData.CurrentPrice = BasePrice;
         }
     }

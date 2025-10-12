@@ -13,17 +13,6 @@ public class LevelStorage : IDataPersistence
     public event Action<float> OnExperienceChanged;
     public event Action<int> OnExperiencePerClickChanged;
 
-    public LevelStorage(int initialLevel, float initialExperience, float[] experienceForLevel
-        , int maxLevel, int experiencePerClick = 1) 
-    {
-        CurrentLevel = initialLevel;
-        CurrentExperienceLevel = initialExperience;
-        ExperiencePerClick = experiencePerClick;
-
-        _experienceForLevel = experienceForLevel;
-        _maxLevel = maxLevel;
-    }
-
     public void ChangeExperiencePerClick(int newValue) 
     {
         if (newValue < 0)
@@ -76,8 +65,8 @@ public class LevelStorage : IDataPersistence
 
     public void LoadData(GameData data)
     {
-        CurrentLevel = data.CurrentLevel;
-        CurrentExperienceLevel = data.CurrentExperienceLevel;
+        CurrentLevel = data.Level;
+        CurrentExperienceLevel = data.ExperienceLevel;
         ExperiencePerClick = data.ExperiencePerClick;
 
         OnLevelChanged?.Invoke(CurrentLevel);
@@ -87,8 +76,8 @@ public class LevelStorage : IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        data.CurrentLevel = CurrentLevel;
-        data.CurrentExperienceLevel = CurrentExperienceLevel;
+        data.Level = CurrentLevel;
+        data.ExperienceLevel = CurrentExperienceLevel;
         data.ExperiencePerClick = ExperiencePerClick;
     }
 }
