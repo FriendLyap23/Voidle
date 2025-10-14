@@ -5,12 +5,15 @@ using Zenject;
 public sealed class MoneyViewModel : IInitializable, IDisposable
 {
     private readonly MoneyStorage _moneyStorage;
+    private readonly CompositeDisposable _disposables = new();
 
-    public readonly ReactiveProperty<string> Money = new();
+    public ReactiveProperty<string> Money { get; }
 
     public MoneyViewModel(MoneyStorage moneyStorage)
     {
         _moneyStorage = moneyStorage;
+        Money = new ReactiveProperty<string>();
+
     }
 
     public void Initialize()
@@ -21,17 +24,7 @@ public sealed class MoneyViewModel : IInitializable, IDisposable
      
     public void AddMoneyPerClick()
     {
-        _moneyStorage.AddMoneyPerClick(_moneyStorage.Money);
-    }
-
-    public void AddMoneyPerSecond() 
-    {
-        //_moneyStorage.SetMoneyPerSecond();
-    }
-
-    public void SpendMoney(int amount) 
-    {
-        _moneyStorage.SpendMoney(amount);
+        _moneyStorage.AddMoneyPerClick();
     }
 
     private void MoneyChanged(int money)

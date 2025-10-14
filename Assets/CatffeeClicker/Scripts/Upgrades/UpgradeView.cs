@@ -1,8 +1,10 @@
 using R3;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
-public class UpgradeUIBinder : MonoBehaviour
+public class UpgradeView : MonoBehaviour
 {
     [Header("Upgrade Configuration")]
     [SerializeField] private string _upgradeName;
@@ -14,13 +16,13 @@ public class UpgradeUIBinder : MonoBehaviour
 
     [Space]
     [Header("UI References")]
-    [SerializeField] private TextView _nameUpgradeView;
-    [SerializeField] private TextView _descriptionUpgradeView;
-    [SerializeField] private TextView _priceUpgradeView;
+    [SerializeField] private TMP_Text _nameUpgradeView;
+    [SerializeField] private TMP_Text _descriptionUpgradeView;
+    [SerializeField] private TMP_Text _priceUpgradeView;
 
-    [SerializeField] private ImageView _iconUpgradeView;
+    [SerializeField] private Image _iconUpgradeView;
 
-    [SerializeField] private ButtonView _buyUpgradeButton;
+    [SerializeField] private Button _buyUpgradeButton;
 
     private PurchaseService _purchaseService;
     private UpgradesViewModelFactory _viewModelFactory;
@@ -42,26 +44,30 @@ public class UpgradeUIBinder : MonoBehaviour
     {
         SetupBindings();
 
-        _buyUpgradeButton.OnClick += () => _purchaseService.TryPurchaseUpgrade(_upgradesViewModel._upgradesStorage);
+        _buyUpgradeButton.onClick.AddListener(OnUpgradeButtonClick);
     }
 
+    public void OnUpgradeButtonClick()
+    {
+        _purchaseService.TryPurchaseUpgrade(_upgradesViewModel._upgradesStorage);
+    }
 
     private void SetupBindings()
     {
         _upgradesViewModel.Name
-            .Subscribe(name => _nameUpgradeView.CurrencyText.text = name)
+            .Subscribe(name => _nameUpgradeView.text = name)
             .AddTo(_disposables);
 
         _upgradesViewModel.Description
-            .Subscribe(description => _descriptionUpgradeView.CurrencyText.text = description)
+            .Subscribe(description => _descriptionUpgradeView.text = description)
             .AddTo(_disposables);
 
         _upgradesViewModel.Price
-            .Subscribe(price => _priceUpgradeView.CurrencyText.text = price)
+            .Subscribe(price => _priceUpgradeView.text = price)
             .AddTo(_disposables);
 
         _upgradesViewModel.Icon
-            .Subscribe(icon => _iconUpgradeView.Image.sprite = icon)
+            .Subscribe(icon => _iconUpgradeView.sprite = icon)
             .AddTo(_disposables);
     }
 

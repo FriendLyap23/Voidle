@@ -6,81 +6,74 @@ public sealed class MoneyStorage : IDataPersistence
     public int MoneyPerClick { get; private set; }
     public int MoneyPerSecond { get; private set; }
 
-    public int MaxMonies { get; private set; }
+    public int MaxMoney { get; private set; }
 
     public event Action<int> OnMoneyChanged;
     public event Action<int> OnMoneyPerClickChanged;
     public event Action<int> OnMoneyPerSecondChanged;
+    public event Action<int> OnMaxMoneyChanged;
 
-    public void SetMoney(int money)
+    public bool CanAddMoney(int amount) => Money + amount <= MaxMoney;
+    public bool CanSpendMoney(int amount) => Money >= amount;
+
+    public void AddMoney(int amount)
     {
-        if (money < 0)
-            throw new ArgumentOutOfRangeException(nameof(money),
-                "Money cannot be negative");
-
-        if (money > MaxMonies)
-            throw new ArgumentOutOfRangeException(nameof(money),
-                $"The amount of money cannot exceed the maximum amount set - {MaxMonies}");
-
-        if (Money != money)
-        {
-            Money = money;
-            OnMoneyChanged?.Invoke(Money);
-        }
-    }
-
-    public void SetMoneyPerSecond(int moneyPerSecond)
-    {
-        if (moneyPerSecond < 0)
-            throw new ArgumentOutOfRangeException(nameof(moneyPerSecond),
-                "Money per second cannot be negative");
-
-        if (MoneyPerSecond != moneyPerSecond)
-        {
-            MoneyPerSecond += moneyPerSecond;
-            OnMoneyPerSecondChanged?.Invoke(moneyPerSecond);
-        }
-    }
-
-    public void SetMoneyPerClick(int moneyPerClick)
-    {
-        if (moneyPerClick < 0)
-            throw new ArgumentOutOfRangeException(nameof(moneyPerClick),
-                "Money per click cannot be negative");
-
-        if (MoneyPerClick != moneyPerClick)
-        {
-            MoneyPerClick += moneyPerClick;
-            OnMoneyPerClickChanged?.Invoke(moneyPerClick);
-        }
-    }
-
-    public bool IsEnoughSpace(int countMoney) => Money + countMoney <= MaxMonies;
-
-    public void AddMoneyPerClick(int countMoney)
-    {
-        if (countMoney < 0)
-            throw new ArgumentOutOfRangeException(nameof(countMoney),
+        if (amount < 0)
+            throw new ArgumentOutOfRangeException(nameof(amount),
                 "Cannot add a negative amount of money");
 
-        if (!IsEnoughSpace(countMoney))
+        if (!CanAddMoney(amount))
             return;
 
-        Money += MoneyPerClick;
+        Money += amount;
         OnMoneyChanged?.Invoke(Money);
     }
 
-    public void SpendMoney(int countMoney)
+    public void SpendMoney(int amount)
     {
-        if (countMoney < 0)
-            throw new ArgumentOutOfRangeException(nameof(countMoney),
+        if (amount < 0)
+            throw new ArgumentOutOfRangeException(nameof(amount),
                 "Cannot spend a negative amount of money");
 
-        if (Money - countMoney < 0)
+        if (!CanSpendMoney(amount))
             return;
 
-        Money -= countMoney;
+        Money -= amount;
         OnMoneyChanged?.Invoke(Money);
+    }
+
+    public void AddMoneyPerClick()
+    {
+        AddMoney(MoneyPerClick);
+    }
+
+    public void AddMoneyPerSecond()
+    {
+        AddMoney(MoneyPerSecond);
+    }
+
+    public void SetNewValueMoneyPerSecond(int addedAmount)
+    {
+        if (addedAmount < 0)
+            throw new ArgumentOutOfRangeException(nameof(addedAmount),
+                "Money per second cannot be negative");
+
+   
+        MoneyPerSecond += addedAmount;
+        OnMoneyPerSecondChanged?.Invoke(MoneyPerSecond);
+
+    }
+
+    public void SetNewValueMoneyPerClick(int addedAmount)
+    {
+        if (addedAmount < 0)
+            throw new ArgumentOutOfRangeException(nameof(addedAmount),
+                "Money per click cannot be negative");
+
+
+        MoneyPerClick += addedAmount;
+        OnMoneyPerClickChanged?.Invoke(MoneyPerClick);
+
     }
 
     public void LoadData(GameData data)
@@ -88,7 +81,7 @@ public sealed class MoneyStorage : IDataPersistence
         Money = data.Money;
         MoneyPerClick = data.MoneyPerClick;
         MoneyPerSecond = data.MoneyPerSecond;
-        MaxMonies = data.MaxMonies; 
+        MaxMoney = data.MaxMonies; 
 
         OnMoneyChanged?.Invoke(Money);
         OnMoneyPerClickChanged?.Invoke(MoneyPerClick);
@@ -100,6 +93,6 @@ public sealed class MoneyStorage : IDataPersistence
         data.Money = Money;
         data.MoneyPerClick = MoneyPerClick;
         data.MoneyPerSecond = MoneyPerSecond;
-        data.MaxMonies = MaxMonies;
+        data.MaxMonies = MaxMoney;
     }
 }

@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 7490698}
   - component: {fileID: 7490701}
   - component: {fileID: 7490700}
-  - component: {fileID: 7490699}
   m_Layer: 0
   m_Name: NameText
   m_TagString: Untagged
@@ -157,19 +156,6 @@ RectTransform:
   m_AnchoredPosition: {x: -236, y: 45}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7490699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7490697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 7490700}
 --- !u!114 &7490700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +446,6 @@ GameObject:
   - component: {fileID: 104243322}
   - component: {fileID: 104243325}
   - component: {fileID: 104243324}
-  - component: {fileID: 104243323}
   m_Layer: 0
   m_Name: DescriptionText
   m_TagString: Untagged
@@ -487,19 +472,6 @@ RectTransform:
   m_AnchoredPosition: {x: -43, y: -15}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &104243323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104243321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 104243324}
 --- !u!114 &104243324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,7 +662,6 @@ GameObject:
   - component: {fileID: 163826584}
   - component: {fileID: 163826587}
   - component: {fileID: 163826586}
-  - component: {fileID: 163826585}
   m_Layer: 0
   m_Name: DescriptionText
   m_TagString: Untagged
@@ -717,19 +688,6 @@ RectTransform:
   m_AnchoredPosition: {x: -43, y: -15}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &163826585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163826583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 163826586}
 --- !u!114 &163826586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,7 +1000,6 @@ GameObject:
   - component: {fileID: 372883642}
   - component: {fileID: 372883641}
   - component: {fileID: 372883640}
-  - component: {fileID: 372883639}
   - component: {fileID: 372883638}
   m_Layer: 0
   m_Name: Button (1)
@@ -1092,23 +1049,11 @@ MonoBehaviour:
   _value: 2
   _type: 1
   _icon: {fileID: -5623194428626525839, guid: ffc1bd64c84e0fb42bf68cdb0d8f3818, type: 3}
-  _nameUpgradeView: {fileID: 7490699}
-  _descriptionUpgradeView: {fileID: 537075776}
-  _priceUpgradeView: {fileID: 2129046788}
-  _iconUpgradeView: {fileID: 618021221}
-  _buyUpgradeButton: {fileID: 372883639}
---- !u!114 &372883639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372883636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00bbe05aa1f760428012cfed3db3fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _nameUpgradeView: {fileID: 7490700}
+  _descriptionUpgradeView: {fileID: 537075777}
+  _priceUpgradeView: {fileID: 2129046789}
+  _iconUpgradeView: {fileID: 618021220}
+  _buyUpgradeButton: {fileID: 372883640}
 --- !u!114 &372883640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,7 +1312,6 @@ GameObject:
   - component: {fileID: 500228768}
   - component: {fileID: 500228770}
   - component: {fileID: 500228769}
-  - component: {fileID: 500228771}
   m_Layer: 0
   m_Name: NameText
   m_TagString: Untagged
@@ -1493,19 +1437,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500228767}
   m_CullTransparentMesh: 1
---- !u!114 &500228771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500228767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 500228769}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1585,6 @@ GameObject:
   - component: {fileID: 537075775}
   - component: {fileID: 537075778}
   - component: {fileID: 537075777}
-  - component: {fileID: 537075776}
   m_Layer: 0
   m_Name: DescriptionText
   m_TagString: Untagged
@@ -1681,19 +1611,6 @@ RectTransform:
   m_AnchoredPosition: {x: -43, y: -15}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &537075776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537075774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 537075777}
 --- !u!114 &537075777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,7 +1720,6 @@ GameObject:
   m_Component:
   - component: {fileID: 618021219}
   - component: {fileID: 618021222}
-  - component: {fileID: 618021221}
   - component: {fileID: 618021220}
   m_Layer: 0
   m_Name: IconView
@@ -1861,19 +1777,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &618021221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618021218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3beec24a4c711584d9d1773b0fc37206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 618021220}
 --- !u!222 &618021222
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1893,7 +1796,6 @@ GameObject:
   - component: {fileID: 660493948}
   - component: {fileID: 660493951}
   - component: {fileID: 660493950}
-  - component: {fileID: 660493949}
   m_Layer: 0
   m_Name: PriceText
   m_TagString: Untagged
@@ -1920,19 +1822,6 @@ RectTransform:
   m_AnchoredPosition: {x: -51, y: 36}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &660493949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660493947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 660493950}
 --- !u!114 &660493950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,10 +2016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e841317678ada4db976ba911a3f4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelView: {fileID: 1437713029}
-  _experienceView: {fileID: 1255191167}
-  _experiencePerClickView: {fileID: 1843320424}
-  _moneyPerClickButton: {fileID: 1532002203}
+  _levelView: {fileID: 1528343890}
+  _experienceView: {fileID: 832455241}
+  _experiencePerClickView: {fileID: 77605242}
 --- !u!1 &832455239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,8 +2335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204531767}
   - component: {fileID: 1204531770}
-  - component: {fileID: 1204531769}
-  - component: {fileID: 1204531768}
+  - component: {fileID: 1204531771}
   m_Layer: 0
   m_Name: IconView
   m_TagString: Untagged
@@ -2475,7 +2362,15 @@ RectTransform:
   m_AnchoredPosition: {x: 112, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1204531768
+--- !u!222 &1204531770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204531766}
+  m_CullTransparentMesh: 1
+--- !u!114 &1204531771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2486,7 +2381,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2505,27 +2400,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1204531769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204531766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3beec24a4c711584d9d1773b0fc37206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 1204531768}
---- !u!222 &1204531770
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204531766}
-  m_CullTransparentMesh: 1
 --- !u!1 &1255191165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,7 +2411,6 @@ GameObject:
   - component: {fileID: 1255191166}
   - component: {fileID: 1255191169}
   - component: {fileID: 1255191168}
-  - component: {fileID: 1255191167}
   m_Layer: 0
   m_Name: CurrentExperienceView
   m_TagString: Untagged
@@ -2565,19 +2438,6 @@ RectTransform:
   m_AnchoredPosition: {x: -301.55, y: 398}
   m_SizeDelta: {x: 389.95, y: 134.67}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1255191167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255191165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 832455241}
 --- !u!114 &1255191168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2627,7 +2487,6 @@ GameObject:
   - component: {fileID: 1288570942}
   - component: {fileID: 1288570944}
   - component: {fileID: 1288570945}
-  - component: {fileID: 1288570943}
   m_Layer: 0
   m_Name: IconView
   m_TagString: Untagged
@@ -2654,7 +2513,15 @@ RectTransform:
   m_AnchoredPosition: {x: 112, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1288570943
+--- !u!222 &1288570944
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288570941}
+  m_CullTransparentMesh: 1
+--- !u!114 &1288570945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2665,7 +2532,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2684,27 +2551,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1288570944
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288570941}
-  m_CullTransparentMesh: 1
---- !u!114 &1288570945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288570941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3beec24a4c711584d9d1773b0fc37206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 1288570943}
 --- !u!1 &1342696370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,7 +2629,6 @@ GameObject:
   - component: {fileID: 1421123699}
   - component: {fileID: 1421123702}
   - component: {fileID: 1421123701}
-  - component: {fileID: 1421123700}
   m_Layer: 0
   m_Name: PriceText
   m_TagString: Untagged
@@ -2810,19 +2655,6 @@ RectTransform:
   m_AnchoredPosition: {x: -51, y: 36}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1421123700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421123698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 1421123701}
 --- !u!114 &1421123701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2933,7 +2765,6 @@ GameObject:
   - component: {fileID: 1437713028}
   - component: {fileID: 1437713031}
   - component: {fileID: 1437713030}
-  - component: {fileID: 1437713029}
   m_Layer: 0
   m_Name: CurrentLevelView
   m_TagString: Untagged
@@ -2961,19 +2792,6 @@ RectTransform:
   m_AnchoredPosition: {x: -708, y: 422.33}
   m_SizeDelta: {x: 389.95, y: 134.67}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1437713029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437713027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 1528343890}
 --- !u!114 &1437713030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3268,7 +3086,7 @@ GameObject:
   - component: {fileID: 1532002206}
   - component: {fileID: 1532002205}
   - component: {fileID: 1532002204}
-  - component: {fileID: 1532002203}
+  - component: {fileID: 1532002207}
   m_Layer: 0
   m_Name: 'MainActionButton '
   m_TagString: Untagged
@@ -3295,18 +3113,6 @@ RectTransform:
   m_AnchoredPosition: {x: -715, y: -184}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1532002203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532002201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00bbe05aa1f760428012cfed3db3fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1532002204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,7 +3156,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1532002205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1532002207}
+        m_TargetAssemblyTypeName: MoneyClickButton, Assembly-CSharp
+        m_MethodName: AddExperienceButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1532002207}
+        m_TargetAssemblyTypeName: MoneyClickButton, Assembly-CSharp
+        m_MethodName: OnMoneyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1532002205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3389,6 +3219,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532002201}
   m_CullTransparentMesh: 1
+--- !u!114 &1532002207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532002201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c0e1e390295c4b9469aaf280bab27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoneyClickButton
+  _moneyPerClickButton: {fileID: 1532002204}
 --- !u!1 &1668584154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,8 +3321,8 @@ GameObject:
   - component: {fileID: 1745031712}
   - component: {fileID: 1745031714}
   - component: {fileID: 1745031713}
-  - component: {fileID: 1745031715}
   - component: {fileID: 1745031716}
+  - component: {fileID: 1745031717}
   m_Layer: 0
   m_Name: MoneyView
   m_TagString: Untagged
@@ -3546,19 +3389,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745031711}
   m_CullTransparentMesh: 1
---- !u!114 &1745031715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745031711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 1069712528}
 --- !u!114 &1745031716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3571,8 +3401,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a071cb99025e99045bc67b0aeebb064c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currencyView: {fileID: 1745031715}
-  _moneyPerClickButton: {fileID: 1532002203}
+  _moneyText: {fileID: 1069712528}
+--- !u!114 &1745031717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745031711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4749807e8ec8bc043b7da2b3bbb901d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoneyPerSecondService
 --- !u!1 &1785369643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,7 +3426,6 @@ GameObject:
   - component: {fileID: 1785369647}
   - component: {fileID: 1785369646}
   - component: {fileID: 1785369645}
-  - component: {fileID: 1785369648}
   - component: {fileID: 1785369649}
   m_Layer: 0
   m_Name: Button
@@ -3699,18 +3539,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785369643}
   m_CullTransparentMesh: 1
---- !u!114 &1785369648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785369643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00bbe05aa1f760428012cfed3db3fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1785369649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3729,11 +3557,11 @@ MonoBehaviour:
   _value: 1
   _type: 2
   _icon: {fileID: -5623194428626525839, guid: ffc1bd64c84e0fb42bf68cdb0d8f3818, type: 3}
-  _nameUpgradeView: {fileID: 500228771}
-  _descriptionUpgradeView: {fileID: 163826585}
-  _priceUpgradeView: {fileID: 1421123700}
+  _nameUpgradeView: {fileID: 500228769}
+  _descriptionUpgradeView: {fileID: 163826586}
+  _priceUpgradeView: {fileID: 1421123701}
   _iconUpgradeView: {fileID: 1288570945}
-  _buyUpgradeButton: {fileID: 1785369648}
+  _buyUpgradeButton: {fileID: 1785369645}
 --- !u!1 &1842906318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +3574,6 @@ GameObject:
   - component: {fileID: 1842906324}
   - component: {fileID: 1842906323}
   - component: {fileID: 1842906322}
-  - component: {fileID: 1842906321}
   - component: {fileID: 1842906320}
   m_Layer: 0
   m_Name: Button (2)
@@ -3796,23 +3623,11 @@ MonoBehaviour:
   _value: 2
   _type: 1
   _icon: {fileID: -5623194428626525839, guid: ffc1bd64c84e0fb42bf68cdb0d8f3818, type: 3}
-  _nameUpgradeView: {fileID: 2006499851}
-  _descriptionUpgradeView: {fileID: 104243323}
-  _priceUpgradeView: {fileID: 660493949}
-  _iconUpgradeView: {fileID: 1204531769}
-  _buyUpgradeButton: {fileID: 1842906321}
---- !u!114 &1842906321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842906318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00bbe05aa1f760428012cfed3db3fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _nameUpgradeView: {fileID: 2006499852}
+  _descriptionUpgradeView: {fileID: 104243324}
+  _priceUpgradeView: {fileID: 660493950}
+  _iconUpgradeView: {fileID: 1204531771}
+  _buyUpgradeButton: {fileID: 1842906322}
 --- !u!114 &1842906322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3906,7 +3721,6 @@ GameObject:
   - component: {fileID: 1843320423}
   - component: {fileID: 1843320426}
   - component: {fileID: 1843320425}
-  - component: {fileID: 1843320424}
   m_Layer: 0
   m_Name: ExperiencePerClickView
   m_TagString: Untagged
@@ -3934,19 +3748,6 @@ RectTransform:
   m_AnchoredPosition: {x: -213.54999, y: 195}
   m_SizeDelta: {x: 389.95, y: 134.67}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1843320424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843320422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 77605242}
 --- !u!114 &1843320425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4121,7 +3922,6 @@ GameObject:
   - component: {fileID: 2006499850}
   - component: {fileID: 2006499853}
   - component: {fileID: 2006499852}
-  - component: {fileID: 2006499851}
   m_Layer: 0
   m_Name: NameText
   m_TagString: Untagged
@@ -4148,19 +3948,6 @@ RectTransform:
   m_AnchoredPosition: {x: -236, y: 45}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2006499851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006499849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 2006499852}
 --- !u!114 &2006499852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4455,7 +4242,6 @@ GameObject:
   - component: {fileID: 2129046787}
   - component: {fileID: 2129046790}
   - component: {fileID: 2129046789}
-  - component: {fileID: 2129046788}
   m_Layer: 0
   m_Name: PriceText
   m_TagString: Untagged
@@ -4482,19 +4268,6 @@ RectTransform:
   m_AnchoredPosition: {x: -51, y: 36}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2129046788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129046786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f78f2853d65cab4b933e7181a3c31bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrencyText: {fileID: 2129046789}
 --- !u!114 &2129046789
 MonoBehaviour:
   m_ObjectHideFlags: 0

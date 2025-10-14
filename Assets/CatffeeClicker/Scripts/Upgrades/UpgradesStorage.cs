@@ -47,10 +47,10 @@ public class UpgradesStorage
         switch (_type)
         {
             case UpgradeType.MoneyPerClick:
-                moneyStorage.SetMoneyPerClick(_value);
+                moneyStorage.SetNewValueMoneyPerClick(_value);
                 break;
             case UpgradeType.MoneyPerSecond:
-                moneyStorage.SetMoneyPerSecond(_value);
+                moneyStorage.SetNewValueMoneyPerSecond(_value);
                 break;
             default:
                 break;
