@@ -3,14 +3,14 @@ using System.Collections.Generic;
 [System.Serializable]
 public class GameData
 {
-    public int Money;
+    public long Money;
     public int MoneyPerClick;
     public int MoneyPerSecond;
+    public long MaxMonies;
 
     public int Level;
     public float ExperienceLevel;
     public int ExperiencePerClick;
-    public int MaxMonies;
 
     public List<UpgradeSaveData> UpgradesSaveData = new List<UpgradeSaveData>();
 
@@ -23,7 +23,7 @@ public class GameData
         Level = 1;
         ExperienceLevel = 0;
         ExperiencePerClick = 1;
-        MaxMonies = 1000;
+        MaxMonies = 100000;
     }
 }
 

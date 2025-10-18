@@ -3,65 +3,73 @@ using UnityEngine;
 
 public class UpgradesStorage
 {
-    private string _name;
-    private string _description;
+    public string Name { get; private set; }
+    public string Description { get; private set; }
 
-    private int _basePrice;
-    private int _currentPrice;
-    private int _value;
+    public int CurrentPrice { get; private set; }
+    //{
+    //    get { return _currentPrice; }
+    //    set
+    //    {
+    //        if (value < 0)
+    //            throw new Exception("Price cannot be a negative");
 
-    private UpgradeType _type;
-    private Sprite _icon;
+    //        _currentPrice = value;
+    //        OnPriceUpgrafeChanged?.Invoke(_currentPrice);
+    //    }
+    //}
 
-    public string Name => _name;
-    public string Description => _description;
+    public int Value { get; private set; }
+    public UpgradeType Type { get; private set; }
+    public Sprite Icon { get; private set; }
 
-    public int BasePrice
+    public event Action<int> OnPriceUpgradeChanged;
+
+    public UpgradesStorage(string name, string description, int basePrice, int value, 
+        UpgradeType type, Sprite icon)
     {
-        get { return _basePrice; }
-        set
-        {
-            if (value < 0)
-                throw new Exception("Price cannot be a negative");
-
-            _basePrice = value;
-        }
-    }
-
-    public int Value => _value;
-    public UpgradeType Type => _type;
-    public Sprite Icon => _icon;
-
-    public UpgradesStorage(string name, string description, int basePrice, int value, UpgradeType type, Sprite icon)
-    {
-        _name = name;
-        _description = description;
-        _basePrice = basePrice;
-        _value = value;
-        _type = type;
-        _icon = icon;
+        Name = name;
+        Description = description;
+        CurrentPrice = basePrice;
+        Value = value;
+        Type = type;
+        Icon = icon;
     }
 
     public void ApplyUpgrade(MoneyStorage moneyStorage)
     {
-        switch (_type)
+        switch (Type)
         {
             case UpgradeType.MoneyPerClick:
-                moneyStorage.SetNewValueMoneyPerClick(_value);
+                moneyStorage.SetNewValueMoneyPerClick(Value);
                 break;
             case UpgradeType.MoneyPerSecond:
-                moneyStorage.SetNewValueMoneyPerSecond(_value);
+                moneyStorage.SetNewValueMoneyPerSecond(Value);
                 break;
             default:
                 break;
         }
     }
 
+    public void PriceChanged(int newPrice) 
+    {
+        CurrentPrice = newPrice;
+        OnPriceUpgradeChanged?.Invoke(CurrentPrice);
+    }
+
+    public void RecalculationCurrentPrice() 
+    {
+        int newPrice = CurrentPrice += 20;
+        PriceChanged(newPrice);
+    }
+
+
     public void LoadFromSaveData(UpgradeSaveData saveData)
     {
         if (saveData != null)
         {
-            BasePrice = saveData.CurrentPrice;
+            CurrentPrice = saveData.CurrentPrice;
+            OnPriceUpgradeChanged?.Invoke(saveData.CurrentPrice);
         }
     }
 
@@ -70,7 +78,7 @@ public class UpgradesStorage
         if (saveData != null)
         {
             saveData.Name = Name;
-            saveData.CurrentPrice = BasePrice;
+            saveData.CurrentPrice = CurrentPrice;
         }
     }
 }

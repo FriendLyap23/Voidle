@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-public class UpgradeViewModel : IInitializable
+public class UpgradeViewModel : IInitializable, IDisposable
 {
     public UpgradesStorage _upgradesStorage { get; private set; }
 
@@ -22,7 +22,20 @@ public class UpgradeViewModel : IInitializable
     {
         Name.Value = _upgradesStorage.Name;
         Description.Value = _upgradesStorage.Description;
-        Price.Value = _upgradesStorage.BasePrice.ToString();
         Icon.Value = _upgradesStorage.Icon;
+
+        PriceChanged(_upgradesStorage.CurrentPrice);
+
+        _upgradesStorage.OnPriceUpgradeChanged += PriceChanged;
+    }
+
+    private void PriceChanged(int newPrice) 
+    {
+        Price.Value = newPrice.ToString();
+    }
+
+    public void Dispose()
+    {
+        _upgradesStorage.OnPriceUpgradeChanged -= PriceChanged;
     }
 }

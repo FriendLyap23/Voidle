@@ -13,7 +13,6 @@ public sealed class MoneyViewModel : IInitializable, IDisposable
     {
         _moneyStorage = moneyStorage;
         Money = new ReactiveProperty<string>();
-
     }
 
     public void Initialize()
@@ -27,9 +26,30 @@ public sealed class MoneyViewModel : IInitializable, IDisposable
         _moneyStorage.AddMoneyPerClick();
     }
 
-    private void MoneyChanged(int money)
+    private void MoneyChanged(long money)
     {
-        Money.Value = money + "$";
+        Money.Value = FormatMoney(money);
+    }
+
+    private string FormatMoney(long amount)
+    {
+        string[] suffixes = { "", "К", "М", "Б", "Т", "Кв", "Кн", "Сх", "Сп", "О", "Н" };
+
+        if (amount == 0)
+            return "0";
+
+        int suffixIndex = 0;
+        double formattedAmount = amount;
+
+        while (formattedAmount >= 1000 && suffixIndex < suffixes.Length - 1)
+        {
+            formattedAmount /= 1000;
+            suffixIndex++;
+        }
+
+        // Простой способ убрать лишние нули
+        return formattedAmount.ToString("0.##") + suffixes[suffixIndex];
+
     }
 
     public void Dispose()

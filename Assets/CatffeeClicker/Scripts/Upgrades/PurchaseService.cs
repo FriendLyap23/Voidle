@@ -12,7 +12,12 @@ public class PurchaseService
 
     public void TryPurchaseUpgrade(UpgradesStorage storage)
     {
-        _moneyStorage.SpendMoney(storage.BasePrice);
-        storage.ApplyUpgrade(_moneyStorage);
+        if (_moneyStorage.CanSpendMoney(storage.CurrentPrice)) 
+        {
+            _moneyStorage.SpendMoney(storage.CurrentPrice);
+
+            storage.ApplyUpgrade(_moneyStorage);
+            storage.RecalculationCurrentPrice();
+        }
     }
 }

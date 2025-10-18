@@ -2,18 +2,17 @@ using System;
 
 public sealed class MoneyStorage : IDataPersistence
 {
-    public int Money { get; private set; }
+    public long Money { get; private set; }
     public int MoneyPerClick { get; private set; }
     public int MoneyPerSecond { get; private set; }
 
-    public int MaxMoney { get; private set; }
+    public long MaxMoney { get; private set; }
 
-    public event Action<int> OnMoneyChanged;
+    public event Action<long> OnMoneyChanged;
     public event Action<int> OnMoneyPerClickChanged;
     public event Action<int> OnMoneyPerSecondChanged;
-    public event Action<int> OnMaxMoneyChanged;
 
-    public bool CanAddMoney(int amount) => Money + amount <= MaxMoney;
+    public bool CanAddMoney(long amount) => Money + amount <= MaxMoney;
     public bool CanSpendMoney(int amount) => Money >= amount;
 
     public void AddMoney(int amount)
@@ -23,7 +22,16 @@ public sealed class MoneyStorage : IDataPersistence
                 "Cannot add a negative amount of money");
 
         if (!CanAddMoney(amount))
+        {
+            long possibleAmount = MaxMoney - Money;
+
+            if (possibleAmount > 0)
+            {
+                Money += possibleAmount;
+                OnMoneyChanged?.Invoke(Money);
+            }
             return;
+        }
 
         Money += amount;
         OnMoneyChanged?.Invoke(Money);
@@ -61,7 +69,6 @@ public sealed class MoneyStorage : IDataPersistence
    
         MoneyPerSecond += addedAmount;
         OnMoneyPerSecondChanged?.Invoke(MoneyPerSecond);
-
     }
 
     public void SetNewValueMoneyPerClick(int addedAmount)

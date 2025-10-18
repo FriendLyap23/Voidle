@@ -264,26 +264,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32134577}
-  - component: {fileID: 32134575}
+  - component: {fileID: 32134578}
   m_Layer: 0
-  m_Name: MoneyInstaller
+  m_Name: ViewModelInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &32134575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32134574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23aa3b72bbbd1114caf3e113e4db92d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &32134577
 Transform:
   m_ObjectHideFlags: 0
@@ -299,6 +287,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1188460127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32134578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32134574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236ac27b5e1cd434fb3ceda732514e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ViewModelsInstaller
 --- !u!1 &77605240
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,50 +571,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104243321}
   m_CullTransparentMesh: 1
---- !u!1 &109904173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 109904174}
-  - component: {fileID: 109904175}
-  m_Layer: 0
-  m_Name: LevelInstaller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &109904174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109904173}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1188460127}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &109904175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109904173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fee927b9067c8b44a26fe4a0f1893e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &162123929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be6bd84d1e14bf42ab885e897c71a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradeName: Upgrade second
+  _upgradeName: 2
   _description: bebbee
   _price: 10
   _value: 2
@@ -1921,50 +1877,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660493947}
   m_CullTransparentMesh: 1
---- !u!1 &750667156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 750667158}
-  - component: {fileID: 750667157}
-  m_Layer: 0
-  m_Name: UpgradeInstaller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &750667157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750667156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df51b233f871677488981df696c0e61c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &750667158
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750667156}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1188460127}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825246784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,8 +2233,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32134577}
-  - {fileID: 109904174}
-  - {fileID: 750667158}
   m_Father: {fileID: 1963892972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204531766
@@ -2582,10 +2492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
-  - {fileID: 32134575}
-  - {fileID: 109904175}
-  - {fileID: 750667157}
-  - {fileID: 1970443992}
+  - {fileID: 32134578}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -3551,7 +3458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be6bd84d1e14bf42ab885e897c71a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradeName: Upgrade One
+  _upgradeName: 1
   _description: lalala
   _price: 10
   _value: 1
@@ -3617,7 +3524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be6bd84d1e14bf42ab885e897c71a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradeName: Upgrade 3
+  _upgradeName: 3
   _description: "\u0446\u0443\u0446\u0443"
   _price: 2333
   _value: 2
@@ -3828,7 +3735,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970443991}
-  - component: {fileID: 1970443992}
   m_Layer: 0
   m_Name: '[UI]'
   m_TagString: Untagged
@@ -3853,64 +3759,6 @@ Transform:
   - {fileID: 2035266966}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1970443992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970443990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236ac27b5e1cd434fb3ceda732514e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1994900781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1994900783}
-  - component: {fileID: 1994900784}
-  m_Layer: 0
-  m_Name: '[DataPersistence]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1994900783
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994900781}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9090123, y: 0.04989302, z: 684.00775}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1994900784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994900781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 839f9e5b1d4ef3944b7044b5125d1cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fileName: Save.json
-  _useEncryption: 0
 --- !u!1 &2006499849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,4 +4222,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1963892972}
   - {fileID: 1970443991}
-  - {fileID: 1994900783}
