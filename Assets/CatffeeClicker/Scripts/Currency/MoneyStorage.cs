@@ -13,7 +13,7 @@ public sealed class MoneyStorage : IDataPersistence
     public event Action<int> OnMoneyPerSecondChanged;
 
     public bool CanAddMoney(long amount) => Money + amount <= MaxMoney;
-    public bool CanSpendMoney(int amount) => Money >= amount;
+    public bool CanSpendMoney(long amount) => Money >= amount;
 
     public void AddMoney(int amount)
     {
@@ -37,7 +37,7 @@ public sealed class MoneyStorage : IDataPersistence
         OnMoneyChanged?.Invoke(Money);
     }
 
-    public void SpendMoney(int amount)
+    public void SpendMoney(long amount)
     {
         if (amount < 0)
             throw new ArgumentOutOfRangeException(nameof(amount),

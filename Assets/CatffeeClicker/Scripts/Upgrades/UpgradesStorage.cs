@@ -5,35 +5,27 @@ public class UpgradesStorage
 {
     public string Name { get; private set; }
     public string Description { get; private set; }
-
-    public int CurrentPrice { get; private set; }
-    //{
-    //    get { return _currentPrice; }
-    //    set
-    //    {
-    //        if (value < 0)
-    //            throw new Exception("Price cannot be a negative");
-
-    //        _currentPrice = value;
-    //        OnPriceUpgrafeChanged?.Invoke(_currentPrice);
-    //    }
-    //}
-
+    public long BasePrice { get; private set; }
+    public long CurrentPrice { get; private set; }
+    public float PriceMultiplier { get; private set; }
     public int Value { get; private set; }
     public UpgradeType Type { get; private set; }
     public Sprite Icon { get; private set; }
 
-    public event Action<int> OnPriceUpgradeChanged;
+    public event Action<long> OnPriceUpgradeChanged;
 
-    public UpgradesStorage(string name, string description, int basePrice, int value, 
-        UpgradeType type, Sprite icon)
+    public UpgradesStorage(string name, string description, long basePrice, float priceMultiplier
+        , int value, UpgradeType type, Sprite icon)
     {
         Name = name;
         Description = description;
-        CurrentPrice = basePrice;
+        BasePrice = basePrice;
+        PriceMultiplier = priceMultiplier;
         Value = value;
         Type = type;
         Icon = icon;
+
+        CurrentPrice = BasePrice;
     }
 
     public void ApplyUpgrade(MoneyStorage moneyStorage)
@@ -51,18 +43,17 @@ public class UpgradesStorage
         }
     }
 
-    public void PriceChanged(int newPrice) 
+    public void PriceChanged(long newPrice) 
     {
         CurrentPrice = newPrice;
         OnPriceUpgradeChanged?.Invoke(CurrentPrice);
     }
 
-    public void RecalculationCurrentPrice() 
+    public void RecalculationCurrentPrice()
     {
-        int newPrice = CurrentPrice += 20;
+        long newPrice = CurrentPrice * ((long)PriceMultiplier);
         PriceChanged(newPrice);
     }
-
 
     public void LoadFromSaveData(UpgradeSaveData saveData)
     {

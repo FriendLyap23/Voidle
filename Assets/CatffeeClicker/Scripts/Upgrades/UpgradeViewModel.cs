@@ -29,7 +29,7 @@ public class UpgradeViewModel : IInitializable, IDisposable
         _upgradesStorage.OnPriceUpgradeChanged += PriceChanged;
     }
 
-    private void PriceChanged(int newPrice) 
+    private void PriceChanged(long newPrice) 
     {
         Price.Value = newPrice.ToString();
     }

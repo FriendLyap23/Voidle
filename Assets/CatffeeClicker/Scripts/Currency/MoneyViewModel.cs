@@ -47,9 +47,7 @@ public sealed class MoneyViewModel : IInitializable, IDisposable
             suffixIndex++;
         }
 
-        // Простой способ убрать лишние нули
         return formattedAmount.ToString("0.##") + suffixes[suffixIndex];
-
     }
 
     public void Dispose()

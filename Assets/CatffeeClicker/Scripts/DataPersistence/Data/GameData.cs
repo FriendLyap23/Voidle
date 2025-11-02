@@ -31,5 +31,6 @@ public class GameData
 public class UpgradeSaveData
 {
     public string Name;
-    public int CurrentPrice;
+    public long BasePrice;
+    public long CurrentPrice;
 }

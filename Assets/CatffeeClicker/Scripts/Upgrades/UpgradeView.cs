@@ -10,6 +10,7 @@ public class UpgradeView : MonoBehaviour
     [SerializeField] private string _upgradeName;
     [SerializeField] private string _description;
     [SerializeField] private int _price;
+    [SerializeField] private float _priceMultiplier;
     [SerializeField] private int _value;
     [SerializeField] private UpgradeType _type;
     [SerializeField] private Sprite _icon;
@@ -36,7 +37,8 @@ public class UpgradeView : MonoBehaviour
         _purchaseService = purchaseService;
         _viewModelFactory = upgradesViewModelFactory;
 
-        _upgradesViewModel = _viewModelFactory.Create(_upgradeName, _description, _price, _value, _type, _icon);
+        _upgradesViewModel = _viewModelFactory.Create(_upgradeName, _description, _price, 
+            _priceMultiplier,_value, _type, _icon);
         _upgradesViewModel.Initialize();
     }
 
