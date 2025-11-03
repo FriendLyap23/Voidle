@@ -87,5 +87,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839f9e5b1d4ef3944b7044b5125d1cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataPersistence
-  _fileName: save.json
-  _useEncryption: 0
+  _saveConfig: {fileID: 11400000, guid: 112d3e22507e55443b5ce8a32820fa61, type: 2}

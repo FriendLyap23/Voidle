@@ -5,7 +5,6 @@ public class UpgradesStorage
 {
     public string Name { get; private set; }
     public string Description { get; private set; }
-    public long BasePrice { get; private set; }
     public long CurrentPrice { get; private set; }
     public float PriceMultiplier { get; private set; }
     public int Value { get; private set; }
@@ -14,18 +13,16 @@ public class UpgradesStorage
 
     public event Action<long> OnPriceUpgradeChanged;
 
-    public UpgradesStorage(string name, string description, long basePrice, float priceMultiplier
+    public UpgradesStorage(string name, string description , long currentPrice, float priceMultiplier
         , int value, UpgradeType type, Sprite icon)
     {
         Name = name;
         Description = description;
-        BasePrice = basePrice;
+        CurrentPrice = currentPrice;
         PriceMultiplier = priceMultiplier;
         Value = value;
         Type = type;
         Icon = icon;
-
-        CurrentPrice = BasePrice;
     }
 
     public void ApplyUpgrade(MoneyStorage moneyStorage)

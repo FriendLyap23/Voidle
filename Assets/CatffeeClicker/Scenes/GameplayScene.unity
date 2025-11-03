@@ -255,6 +255,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7490697}
   m_CullTransparentMesh: 1
+--- !u!1 &23529171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23529172}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23529172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23529171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.07558, y: 0.54298, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32134574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upgradeName: Second Upgrade
   _description: +5
-  _price: 20
+  _currentPrice: 20
   _priceMultiplier: 5
   _value: 5
   _type: 1
@@ -3574,7 +3605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upgradeName: First Upgrade
   _description: +2
-  _price: 10
+  _currentPrice: 10
   _priceMultiplier: 2
   _value: 1
   _type: 2
@@ -3641,7 +3672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upgradeName: Third Upgrade
   _description: +10
-  _price: 50
+  _currentPrice: 30
   _priceMultiplier: 10
   _value: 2
   _type: 1
@@ -4338,3 +4369,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1963892972}
   - {fileID: 1970443991}
+  - {fileID: 23529172}

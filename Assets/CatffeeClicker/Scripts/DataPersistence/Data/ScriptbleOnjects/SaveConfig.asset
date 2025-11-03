@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc32d09b09f94244a702005efa89a60, type: 3}
+  m_Name: SaveConfig
+  m_EditorClassIdentifier: Assembly-CSharp::SaveConfig
+  fileName: game.save
+  useEncryption: 0
+  defaultMoney: 11
+  defaultMoneyPerClick: 1
+  defaultMoneyPerSecond: 0
+  defaultMaxMonies: 100000
+  defaultLevel: 1
+  defaultExperienceLevel: 0
+  defaultExperiencePerClick: 1

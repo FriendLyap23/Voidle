@@ -4,9 +4,8 @@ using Zenject;
 
 public class DataPersistence : MonoBehaviour
 {
-    [Header("File Storage Config")]
-    [SerializeField] private string _fileName;
-    [SerializeField] private bool _useEncryption;
+    [Header("Configuration")]
+    [SerializeField] private SaveConfig _saveConfig;
 
     private GameData _gameData;
     private List<IDataPersistence> _dataPersistenceObjects;
@@ -30,16 +29,35 @@ public class DataPersistence : MonoBehaviour
 
     private void Start()
     {
-        _fileDataHandler = new FileDataHandler(Application.persistentDataPath, _fileName, _useEncryption);
+        _fileDataHandler = new FileDataHandler
+            (Application.persistentDataPath,
+            _saveConfig.fileName,
+            _saveConfig.useEncryption
+            );
 
-        Debug.Log($"Save file path: {Application.persistentDataPath}/{_fileName}");
+        Debug.Log($"Save file path: {Application.persistentDataPath}/{_saveConfig.fileName}");
 
         LoadGame();
     }
 
     public void NewGame() 
     {
-        _gameData = new GameData();
+        _gameData = CreateDefaultGameData();
+    }
+
+    private GameData CreateDefaultGameData()
+    {
+        return new GameData
+        {
+            Money = _saveConfig.defaultMoney,
+            MoneyPerClick = _saveConfig.defaultMoneyPerClick,
+            MoneyPerSecond = _saveConfig.defaultMoneyPerSecond,
+            MaxMonies = _saveConfig.defaultMaxMonies,
+            Level = _saveConfig.defaultLevel,
+            ExperienceLevel = _saveConfig.defaultExperienceLevel,
+            ExperiencePerClick = _saveConfig.defaultExperiencePerClick,
+            UpgradesSaveData = new List<UpgradeSaveData>()
+        };
     }
 
     public void LoadGame()

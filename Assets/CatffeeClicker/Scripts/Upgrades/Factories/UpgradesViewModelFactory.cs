@@ -9,10 +9,10 @@ public class UpgradesViewModelFactory
         _upgradeFactory = upgradeFactory;
     }
 
-    public UpgradeViewModel Create(string name, string description, int price, float priceMultiplier,
+    public UpgradeViewModel Create(string name, string description, long currentPrice, float priceMultiplier,
         int value, UpgradeType type, Sprite icon)
     {
-        var upgradesStorage = _upgradeFactory.Create(name, description, price, priceMultiplier, value, type, icon);
+        var upgradesStorage = _upgradeFactory.Create(name, description, currentPrice, priceMultiplier, value, type, icon);
         return new UpgradeViewModel(upgradesStorage);
     }
 }
