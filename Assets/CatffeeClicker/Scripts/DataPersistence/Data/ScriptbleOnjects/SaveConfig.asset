@@ -18,6 +18,9 @@ MonoBehaviour:
   defaultMoneyPerClick: 1
   defaultMoneyPerSecond: 0
   defaultMaxMonies: 100000
+  _experienceForLevel:
+  - 5
+  - 10
   defaultLevel: 1
   defaultExperienceLevel: 0
   defaultExperiencePerClick: 1

@@ -9,7 +9,7 @@ public class GameData
     public long MaxMonies;
 
     public int Level;
-    public float ExperienceLevel;
+    public int ExperienceLevel;
     public int ExperiencePerClick;
 
     public List<UpgradeSaveData> UpgradesSaveData = new List<UpgradeSaveData>();

@@ -1,17 +1,26 @@
 using System;
+using Zenject;
 
 public class LevelStorage : IDataPersistence
 {
     private int _maxLevel;
-    private float[] _experienceForLevel;
+    private int[] _experienceForLevel;
 
     public int CurrentLevel { get; private set; }
-    public float CurrentExperienceLevel { get; private set; }
+    public int CurrentExperienceLevel { get; private set; }
     public int ExperiencePerClick { get; private set; }
 
     public event Action<int> OnLevelChanged;
-    public event Action<float> OnExperienceChanged;
+    public event Action<int> OnExperienceChanged;
     public event Action<int> OnExperiencePerClickChanged;
+
+    private SaveConfig _saveConfig;
+
+    [Inject]
+    private void Constructor(SaveConfig saveConfig) 
+    {
+        _saveConfig = saveConfig;
+    }
 
     public void ChangeExperiencePerClick(int newValue) 
     {
@@ -53,7 +62,7 @@ public class LevelStorage : IDataPersistence
     private void CheckForLevelUp()
     {
         while (CurrentLevel < _maxLevel &&
-               CurrentLevel + 1 < _experienceForLevel.Length &&
+               CurrentLevel + 1 <= _experienceForLevel.Length &&
                CurrentExperienceLevel >= _experienceForLevel[CurrentLevel])
         {
             CurrentExperienceLevel -= _experienceForLevel[CurrentLevel];
@@ -68,6 +77,9 @@ public class LevelStorage : IDataPersistence
         CurrentLevel = data.Level;
         CurrentExperienceLevel = data.ExperienceLevel;
         ExperiencePerClick = data.ExperiencePerClick;
+
+        _experienceForLevel = _saveConfig.ExperienceForLevel;
+        _maxLevel = _saveConfig.MaxLevel;
 
         OnLevelChanged?.Invoke(CurrentLevel);
         OnExperienceChanged?.Invoke(CurrentExperienceLevel);

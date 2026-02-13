@@ -4,8 +4,7 @@ using Zenject;
 
 public class DataPersistence : MonoBehaviour
 {
-    [Header("Configuration")]
-    [SerializeField] private SaveConfig _saveConfig;
+    private SaveConfig _saveConfig;
 
     private GameData _gameData;
     private List<IDataPersistence> _dataPersistenceObjects;
@@ -14,9 +13,10 @@ public class DataPersistence : MonoBehaviour
     public static DataPersistence Instance { get; private set; }
 
     [Inject]
-    private void Construct(List<IDataPersistence> dataPersistenceObjects)
+    private void Construct(List<IDataPersistence> dataPersistenceObjects, SaveConfig saveConfig)
     {
         _dataPersistenceObjects = dataPersistenceObjects;
+        _saveConfig = saveConfig;
     }
 
     private void Awake()
@@ -53,9 +53,11 @@ public class DataPersistence : MonoBehaviour
             MoneyPerClick = _saveConfig.defaultMoneyPerClick,
             MoneyPerSecond = _saveConfig.defaultMoneyPerSecond,
             MaxMonies = _saveConfig.defaultMaxMonies,
+
             Level = _saveConfig.defaultLevel,
             ExperienceLevel = _saveConfig.defaultExperienceLevel,
             ExperiencePerClick = _saveConfig.defaultExperiencePerClick,
+
             UpgradesSaveData = new List<UpgradeSaveData>()
         };
     }

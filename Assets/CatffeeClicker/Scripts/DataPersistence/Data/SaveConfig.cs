@@ -12,7 +12,11 @@ public class SaveConfig : ScriptableObject
     public int defaultMoneyPerClick = 1;
     public int defaultMoneyPerSecond = 0;
     public long defaultMaxMonies = 100000;
+
+    public int[] ExperienceForLevel;
+
+    public int MaxLevel;
     public int defaultLevel = 1;
-    public float defaultExperienceLevel = 0;
+    public int defaultExperienceLevel = 0;
     public int defaultExperiencePerClick = 1;
 }

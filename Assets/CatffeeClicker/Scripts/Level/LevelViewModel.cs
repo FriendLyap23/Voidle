@@ -31,7 +31,7 @@ public class LevelViewModel : IInitializable, IDisposable
         _levelStorage.AddExperiencePerClick();
     }
 
-    private void OnExperienceChanged(float experience)
+    private void OnExperienceChanged(int experience)
     {
         Experience.Value = experience.ToString();
     }
