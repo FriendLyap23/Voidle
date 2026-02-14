@@ -1,4 +1,5 @@
 using System;
+using Zenject;
 
 public sealed class MoneyStorage : IDataPersistence
 {
@@ -14,6 +15,14 @@ public sealed class MoneyStorage : IDataPersistence
 
     public bool CanAddMoney(long amount) => Money + amount <= MaxMoney;
     public bool CanSpendMoney(long amount) => Money >= amount;
+
+    private SaveConfig _saveConfig;
+
+    [Inject]
+    private void Constructor(SaveConfig saveConfig)
+    {
+        _saveConfig = saveConfig;
+    }
 
     public void AddMoney(int amount)
     {
@@ -77,7 +86,6 @@ public sealed class MoneyStorage : IDataPersistence
             throw new ArgumentOutOfRangeException(nameof(addedAmount),
                 "Money per click cannot be negative");
 
-
         MoneyPerClick += addedAmount;
         OnMoneyPerClickChanged?.Invoke(MoneyPerClick);
 
@@ -88,7 +96,8 @@ public sealed class MoneyStorage : IDataPersistence
         Money = data.Money;
         MoneyPerClick = data.MoneyPerClick;
         MoneyPerSecond = data.MoneyPerSecond;
-        MaxMoney = data.MaxMonies; 
+
+        MaxMoney = _saveConfig.MaxMoney; 
 
         OnMoneyChanged?.Invoke(Money);
         OnMoneyPerClickChanged?.Invoke(MoneyPerClick);
@@ -100,6 +109,5 @@ public sealed class MoneyStorage : IDataPersistence
         data.Money = Money;
         data.MoneyPerClick = MoneyPerClick;
         data.MoneyPerSecond = MoneyPerSecond;
-        data.MaxMonies = MaxMoney;
     }
 }

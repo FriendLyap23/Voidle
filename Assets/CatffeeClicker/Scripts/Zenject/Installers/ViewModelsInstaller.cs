@@ -11,7 +11,7 @@ public sealed class ViewModelsInstaller : MonoInstaller
 
         Container
             .BindInterfacesAndSelfTo<LevelViewModel>()
-            .AsSingle()
+            .AsSingle() 
             .NonLazy();
 
         Container

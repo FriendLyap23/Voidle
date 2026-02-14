@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaveConfig
   fileName: game.save
   useEncryption: 0
-  defaultMoney: 11
+  defaultMoney: 0
   defaultMoneyPerClick: 1
   defaultMoneyPerSecond: 0
   defaultMaxMonies: 100000
-  _experienceForLevel:
-  - 5
-  - 10
-  defaultLevel: 1
+  ExperienceForLevel: 050000000a0000000f00000014000000
+  MaxLevel: 10
+  defaultLevel: 0
   defaultExperienceLevel: 0
   defaultExperiencePerClick: 1

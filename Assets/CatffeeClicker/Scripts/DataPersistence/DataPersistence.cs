@@ -4,7 +4,9 @@ using Zenject;
 
 public class DataPersistence : MonoBehaviour
 {
-    private SaveConfig _saveConfig;
+    [Header("File Storage Config")]
+    [SerializeField] private string _fileName;
+    [SerializeField] private bool _useEncryption;
 
     private GameData _gameData;
     private List<IDataPersistence> _dataPersistenceObjects;
@@ -13,10 +15,9 @@ public class DataPersistence : MonoBehaviour
     public static DataPersistence Instance { get; private set; }
 
     [Inject]
-    private void Construct(List<IDataPersistence> dataPersistenceObjects, SaveConfig saveConfig)
+    private void Construct(List<IDataPersistence> dataPersistenceObjects)
     {
         _dataPersistenceObjects = dataPersistenceObjects;
-        _saveConfig = saveConfig;
     }
 
     private void Awake()
@@ -29,37 +30,16 @@ public class DataPersistence : MonoBehaviour
 
     private void Start()
     {
-        _fileDataHandler = new FileDataHandler
-            (Application.persistentDataPath,
-            _saveConfig.fileName,
-            _saveConfig.useEncryption
-            );
+        _fileDataHandler = new FileDataHandler(Application.persistentDataPath, _fileName, _useEncryption);
 
-        Debug.Log($"Save file path: {Application.persistentDataPath}/{_saveConfig.fileName}");
+        Debug.Log($"Save file path: {Application.persistentDataPath}/{_fileName}");
 
         LoadGame();
     }
 
     public void NewGame() 
     {
-        _gameData = CreateDefaultGameData();
-    }
-
-    private GameData CreateDefaultGameData()
-    {
-        return new GameData
-        {
-            Money = _saveConfig.defaultMoney,
-            MoneyPerClick = _saveConfig.defaultMoneyPerClick,
-            MoneyPerSecond = _saveConfig.defaultMoneyPerSecond,
-            MaxMonies = _saveConfig.defaultMaxMonies,
-
-            Level = _saveConfig.defaultLevel,
-            ExperienceLevel = _saveConfig.defaultExperienceLevel,
-            ExperiencePerClick = _saveConfig.defaultExperiencePerClick,
-
-            UpgradesSaveData = new List<UpgradeSaveData>()
-        };
+        _gameData = new GameData();
     }
 
     public void LoadGame()
