@@ -1,13 +1,20 @@
+using R3;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
+[RequireComponent(typeof(MoneyButtonAnimations))]
 public class MoneyClickButton : MonoBehaviour
 {
-    [SerializeField] private Button _moneyPerClickButton;
+    private Button _moneyClickButton;
+
+    private readonly Subject<Unit> _onClicked = new Subject<Unit>();
 
     private MoneyViewModel _moneyViewModel;
     private LevelViewModel _levelViewModel;
+
+    public Observable<Unit> OnClicked => _onClicked;
+
 
     [Inject]
     private void Constructor(MoneyViewModel moneyViewModel, LevelViewModel levelViewModel)
@@ -16,15 +23,18 @@ public class MoneyClickButton : MonoBehaviour
         _levelViewModel = levelViewModel;
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        _moneyPerClickButton.onClick.AddListener(OnMoneyButtonClick);
-        _moneyPerClickButton.onClick.AddListener(AddExperienceButton);
+        _moneyClickButton = GetComponent<Button>();
+
+        _moneyClickButton.onClick.AddListener(OnMoneyButtonClick);
+        _moneyClickButton.onClick.AddListener(AddExperienceButton);
     }
 
     public void OnMoneyButtonClick()
     {
         _moneyViewModel.AddMoneyPerClick();
+        _onClicked.OnNext(Unit.Default);
     }
 
     public void AddExperienceButton()
@@ -32,9 +42,9 @@ public class MoneyClickButton : MonoBehaviour
         _levelViewModel.AddExperience();
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        _moneyPerClickButton.onClick.RemoveListener(OnMoneyButtonClick);
-        _moneyPerClickButton.onClick.RemoveListener(AddExperienceButton);
+        _moneyClickButton.onClick.RemoveListener(OnMoneyButtonClick);
+        _moneyClickButton.onClick.RemoveListener(AddExperienceButton);
     }
 }

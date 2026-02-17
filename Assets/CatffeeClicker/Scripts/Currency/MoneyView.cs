@@ -1,7 +1,6 @@
 using R3;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 public sealed class MoneyView : MonoBehaviour
