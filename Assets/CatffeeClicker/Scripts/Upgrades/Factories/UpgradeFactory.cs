@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class UpgradeFactory
 {
@@ -12,7 +13,7 @@ public class UpgradeFactory
     }
 
     public UpgradesStorage Create(string name, string description, long currentPrice, float priceMultiplier,
-        int value, UpgradeType type, Sprite icon)
+        int value, UpgradeType type, AssetReferenceSprite icon)
     {
         if (!_cache.ContainsKey(name))
         {

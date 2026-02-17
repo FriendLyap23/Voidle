@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 17c44b42bd02efb44b727e53124a7601
   m_SerializeEntries:
-  - m_GUID: aceaee2875a037b40b2412bb33491dad
-    m_Address: Assets/CatffeeClicker/Prefabs/Upgrades/UpgradeButton.prefab
+  - m_GUID: 112d3e22507e55443b5ce8a32820fa61
+    m_Address: Assets/CatffeeClicker/Scripts/DataPersistence/Data/ScriptbleOnjects/SaveConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

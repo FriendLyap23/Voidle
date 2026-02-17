@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: UI
+  m_GUID: 8f71d86db000d7b48b836bf75bc8ec77
+  m_SerializeEntries:
+  - m_GUID: 01336911ec484854ba31a114234f7616
+    m_Address: half-moon-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26bb17eb070a0f047b88dc01a531d707
+    m_Address: jupiter-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 297ee4e3aaf33da4993d8bc4518437d9
+    m_Address: exoplanet-2-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4294fb30134bec243928bd7699231849
+    m_Address: earth-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f4a93aec386690478cd867df2d7c25b
+    m_Address: venus-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54f22d25fadf62e469b1f81a8e05f628
+    m_Address: solar-system-2-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 622bea15bae640a4aa803b7304a0c50b
+    m_Address: full-moon-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68c1807784bdbdc429ce74d95ba5996f
+    m_Address: new-moon-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83941569853cbcd4caa756a8f56f0393
+    m_Address: mars-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 871e71406ce54554abe957a18debc97e
+    m_Address: exoplanet-6-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88e91ff07bf933045907480303af423b
+    m_Address: crescent-moon-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 892e431d8195bfb40be0043865e56785
+    m_Address: black-hole-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f85f651914e38e4794ad3c21cd094f2
+    m_Address: pluto-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 954936d9c3ab766469cd40e95fe4eb53
+    m_Address: commet-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c312c96aabd780b458e35126d6eb218e
+    m_Address: star-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c93d1076045fa9f4186c68441ebd4b93
+    m_Address: exoplanet-1-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf8fcbf3811e39d42b5e7b48fbf4fb40
+    m_Address: sun-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d13fbff4d432b074ea62435772dc3b94
+    m_Address: neptune-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc5fdadf0428ca745bb76b2827d32904
+    m_Address: exoplanet-3-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e73e4a164c4915a42b58ae150c5d2537
+    m_Address: satellite-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efa80e3119a312841bf99f5d33ce5682
+    m_Address: mercury-512
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 20e96e13ab373b5418401b2e7f7f2734, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4113f8ae1321e1e449d581c2be5e51b4, type: 2}
+    - {fileID: 11400000, guid: 22bab43a283338c4a82f12eea21890bd, type: 2}

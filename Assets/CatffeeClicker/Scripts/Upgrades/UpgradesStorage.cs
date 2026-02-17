@@ -1,7 +1,7 @@
 using R3;
 using System;
 using UnityEngine;
-
+using UnityEngine.AddressableAssets;
 public class UpgradesStorage: IDisposable
 {
     private ReactiveProperty<long> _currentPrice = new();
@@ -12,10 +12,10 @@ public class UpgradesStorage: IDisposable
     public float PriceMultiplier { get; private set; }
     public int Value { get; private set; }
     public UpgradeType Type { get; private set; }
-    public Sprite Icon { get; private set; }
+    public AssetReferenceSprite Icon { get; private set; }
 
     public UpgradesStorage(string name, string description , long currentPrice, float priceMultiplier
-        , int value, UpgradeType type, Sprite icon)
+        , int value, UpgradeType type, AssetReferenceSprite icon)
     {
         Name = name;
         Description = description;

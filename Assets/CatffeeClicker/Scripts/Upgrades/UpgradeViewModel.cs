@@ -1,13 +1,15 @@
 using R3;
 using System;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using Zenject;
 
 public class UpgradeViewModel : IInitializable, IDisposable
 {
     private PurchaseService _purchaseService;
-
     private CompositeDisposable _disposables = new();
+
+    private UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<Sprite> _iconHandle;
     public UpgradesStorage _upgradesStorage { get; private set; }
 
     private ReactiveProperty<string> _name = new();
@@ -30,9 +32,25 @@ public class UpgradeViewModel : IInitializable, IDisposable
     {
         _name.Value = _upgradesStorage.Name;
         _description.Value = _upgradesStorage.Description;
-        _icon.Value = _upgradesStorage.Icon;
+
+        LoadIcon();
 
         _upgradesStorage.CurrentPrice.Subscribe(FormatterPrice).AddTo(_disposables);
+    }
+
+    public void LoadIcon() 
+    {
+        if (_upgradesStorage.Icon == null || !_upgradesStorage.Icon.RuntimeKeyIsValid())
+            return;
+
+        _iconHandle = _upgradesStorage.Icon.LoadAssetAsync();
+        _iconHandle.Completed += handle =>
+            {
+                if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+                {
+                    _icon.Value = handle.Result;
+                }
+            };
     }
 
     public void Purchase() 
@@ -47,6 +65,9 @@ public class UpgradeViewModel : IInitializable, IDisposable
 
     public void Dispose()
     {
+        if (_iconHandle.IsValid())
+            Addressables.Release(_iconHandle);
+
         _name.Dispose();
         _description.Dispose();
         _price.Dispose();

@@ -1,6 +1,7 @@
 using R3;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Zenject;
 
@@ -13,7 +14,7 @@ public class UpgradeView : MonoBehaviour
     [SerializeField] private float _priceMultiplier;
     [SerializeField] private int _value;
     [SerializeField] private UpgradeType _type;
-    [SerializeField] private Sprite _icon;
+    [SerializeField] private AssetReferenceSprite _icon;
 
     [Space]
     [Header("UI References")]

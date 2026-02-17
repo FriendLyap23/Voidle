@@ -236,6 +236,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.12
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: c93d1076045fa9f4186c68441ebd4b93
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: exoplanet-1-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (1)
@@ -483,6 +500,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 871e71406ce54554abe957a18debc97e
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: exoplanet-6-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (6)
@@ -686,6 +720,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 83941569853cbcd4caa756a8f56f0393
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: mars-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -946,6 +997,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.17
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: efa80e3119a312841bf99f5d33ce5682
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: mercury-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (11)
@@ -1154,6 +1222,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 622bea15bae640a4aa803b7304a0c50b
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: full-moon-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -1592,6 +1677,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.19
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 8f85f651914e38e4794ad3c21cd094f2
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: pluto-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (14)
@@ -1720,6 +1822,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 892e431d8195bfb40be0043865e56785
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: black-hole-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -1855,6 +1974,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: cf8fcbf3811e39d42b5e7b48fbf4fb40
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: sun-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (16)
@@ -1987,6 +2123,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: c312c96aabd780b458e35126d6eb218e
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: star-512
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -2172,6 +2325,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 954936d9c3ab766469cd40e95fe4eb53
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: commet-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -2385,6 +2555,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: e73e4a164c4915a42b58ae150c5d2537
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: satellite-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -2656,6 +2843,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 88e91ff07bf933045907480303af423b
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: crescent-moon-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (4)
@@ -2896,6 +3100,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: dc5fdadf0428ca745bb76b2827d32904
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: exoplanet-3-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -3935,6 +4156,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.13
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 297ee4e3aaf33da4993d8bc4518437d9
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: exoplanet-2-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (2)
@@ -4069,6 +4307,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 01336911ec484854ba31a114234f7616
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: half-moon-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (7)
@@ -4202,6 +4457,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: d13fbff4d432b074ea62435772dc3b94
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: neptune-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
@@ -4481,6 +4753,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.22
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 54f22d25fadf62e469b1f81a8e05f628
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: solar-system-2-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (19)
@@ -4725,6 +5014,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.18
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 68c1807784bdbdc429ce74d95ba5996f
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: new-moon-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (13)
@@ -4858,6 +5164,23 @@ PrefabInstance:
       propertyPath: _priceMultiplier
       value: 1.16
       objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 26bb17eb070a0f047b88dc01a531d707
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: jupiter-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
       value: UpgradeButton (9)
@@ -4986,6 +5309,23 @@ PrefabInstance:
     - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: _priceMultiplier
       value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_AssetGUID
+      value: 4294fb30134bec243928bd7699231849
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectName
+      value: earth-512_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_SubObjectType
+      value: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 725803106994504869, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
+      propertyPath: _icon.m_EditorAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3024121051982079634, guid: aceaee2875a037b40b2412bb33491dad, type: 3}
       propertyPath: m_Name
