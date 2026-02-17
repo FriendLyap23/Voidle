@@ -25,16 +25,14 @@ public class UpgradeView : MonoBehaviour
 
     [SerializeField] private Button _buyUpgradeButton;
 
-    private PurchaseService _purchaseService;
     private UpgradesViewModelFactory _viewModelFactory;
     private UpgradeViewModel _upgradesViewModel;
 
     private CompositeDisposable _disposables = new();
 
     [Inject]
-    private void Constructor(PurchaseService purchaseService, UpgradesViewModelFactory upgradesViewModelFactory)
+    private void Constructor(UpgradesViewModelFactory upgradesViewModelFactory)
     {
-        _purchaseService = purchaseService;
         _viewModelFactory = upgradesViewModelFactory;
 
         _upgradesViewModel = _viewModelFactory.Create(_upgradeName, _description, 
@@ -52,7 +50,7 @@ public class UpgradeView : MonoBehaviour
 
     public void OnUpgradeButtonClick()
     {
-        _purchaseService.TryPurchaseUpgrade(_upgradesViewModel._upgradesStorage);
+        _upgradesViewModel.Purchase();
     }
 
     private void SetupBindings()

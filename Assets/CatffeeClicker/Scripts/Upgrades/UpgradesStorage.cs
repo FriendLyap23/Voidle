@@ -1,24 +1,25 @@
+using R3;
 using System;
 using UnityEngine;
 
-public class UpgradesStorage
+public class UpgradesStorage: IDisposable
 {
+    private ReactiveProperty<long> _currentPrice = new();
+
+    public ReadOnlyReactiveProperty<long> CurrentPrice => _currentPrice;
     public string Name { get; private set; }
     public string Description { get; private set; }
-    public long CurrentPrice { get; private set; }
     public float PriceMultiplier { get; private set; }
     public int Value { get; private set; }
     public UpgradeType Type { get; private set; }
     public Sprite Icon { get; private set; }
-
-    public event Action<long> OnPriceUpgradeChanged;
 
     public UpgradesStorage(string name, string description , long currentPrice, float priceMultiplier
         , int value, UpgradeType type, Sprite icon)
     {
         Name = name;
         Description = description;
-        CurrentPrice = currentPrice;
+        _currentPrice.Value = currentPrice;
         PriceMultiplier = priceMultiplier;
         Value = value;
         Type = type;
@@ -42,19 +43,18 @@ public class UpgradesStorage
 
     public void PriceChanged(long newPrice) 
     {
-        CurrentPrice = newPrice;
-        OnPriceUpgradeChanged?.Invoke(CurrentPrice);
+        _currentPrice.Value = newPrice;
     }
 
     public void RecalculationCurrentPrice()
     {
-        double calculatedPrice = (double)CurrentPrice * PriceMultiplier;
+        double calculatedPrice = (double)_currentPrice.Value * PriceMultiplier;
 
         long newPrice = (long)Math.Round(calculatedPrice);
 
-        if (newPrice <= CurrentPrice)
+        if (newPrice <= _currentPrice.Value)
         {
-            newPrice = CurrentPrice + 1;
+            newPrice = _currentPrice.Value + 1;
         }
 
         PriceChanged(newPrice);
@@ -63,10 +63,7 @@ public class UpgradesStorage
     public void LoadFromSaveData(UpgradeSaveData saveData)
     {
         if (saveData != null)
-        {
-            CurrentPrice = saveData.CurrentPrice;
-            OnPriceUpgradeChanged?.Invoke(saveData.CurrentPrice);
-        }
+            _currentPrice.Value = saveData.CurrentPrice;
     }
 
     public void PopulateSaveData(UpgradeSaveData saveData)
@@ -74,7 +71,12 @@ public class UpgradesStorage
         if (saveData != null)
         {
             saveData.Name = Name;
-            saveData.CurrentPrice = CurrentPrice;
+            saveData.CurrentPrice = _currentPrice.Value;
         }
+    }
+
+    public void Dispose()
+    {
+        _currentPrice.Dispose();
     }
 }

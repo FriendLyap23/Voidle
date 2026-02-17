@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Zenject;
 
 public class UpgradeRegistry : IDataPersistence
 {
@@ -33,35 +32,14 @@ public class UpgradeRegistry : IDataPersistence
     {
         _cachedSaveData = data.UpgradesSaveData ?? new List<UpgradeSaveData>();
 
-        //if (data.UpgradesSaveData == null)
-        //    return;
-
         foreach (var upgrade in _registeredUpgrades)
         {
-            //var saveData = data.UpgradesSaveData.FirstOrDefault(x => x.Name == upgrade.Name);
-            //if (saveData != null)
-            //{
-            //    upgrade.LoadFromSaveData(saveData);
-            //}
-
             TryLoadUpgradeFromCache(upgrade);
         }
     }
 
     public void SaveData(ref GameData data)
     {
-        //if (data.UpgradesSaveData == null)
-        //    data.UpgradesSaveData = new List<UpgradeSaveData>();
-
-        //data.UpgradesSaveData.RemoveAll(x => _registeredUpgrades.Any(u => u.Name == x.Name));
-
-        //foreach (var upgrade in _registeredUpgrades)
-        //{
-        //    var saveData = new UpgradeSaveData();
-        //    upgrade.PopulateSaveData(saveData);
-        //    data.UpgradesSaveData.Add(saveData);
-        //}
-
         data.UpgradesSaveData = _registeredUpgrades.Select(upgrade =>
         {
             var saveData = new UpgradeSaveData();
