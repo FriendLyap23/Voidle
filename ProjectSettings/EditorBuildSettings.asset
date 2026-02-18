@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/CatffeeClicker/Scenes/Bootstrap.unity
     guid: 93b2eddfd6bee1e46814de4b4b8c241d
-  - enabled: 1
+  - enabled: 0
     path: Assets/CatffeeClicker/Scenes/GameplayScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
